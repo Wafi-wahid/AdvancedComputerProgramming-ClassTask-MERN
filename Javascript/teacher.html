@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Names</title>
+  </head>
+  <body>
+    <div class="button-container" style="text-align: center">
+      <button style="background-color: pink" onclick="showTeacher('ACP')">
+        ACP
+      </button>
+      <button
+        style="background-color: rgb(45, 172, 40)"
+        onclick="showTeacher('AI')"
+      >
+        AI
+      </button>
+      <button
+        style="background-color: rgb(190, 41, 66)"
+        onclick="showTeacher('HCI')"
+      >
+        HCI
+      </button>
+      <button
+        style="background-color: rgb(113, 93, 199)"
+        onclick="showTeacher('SRE')"
+      >
+        SRE
+      </button>
+    </div>
+
+    <div id="output" style="text-align: center; color: blueviolet">
+      Click to see teachers name!
+    </div>
+
+    <script>
+      const teachers = {
+        ACP: "Dr. Shumaila",
+        AI: "Dr. Shumaila",
+        HCI: "Maam Tazzaina",
+        SRE: "Maam Tazzaina",
+      };
+
+      function showTeacher(subject) {
+        const teacherName = teachers[subject];
+
+        document.getElementById(
+          "output"
+        ).innerText = `The teacher for ${subject} is ${teacherName}.`;
+      }
+    </script>
+  </body>
+</html>
