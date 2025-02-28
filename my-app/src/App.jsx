@@ -1,18 +1,15 @@
-import React from "react";
-import Main from "../Components/Main";
+import React, { useState } from "react";
+import Counter from "../Components/Counter";
+
 function App() {
-  function handleClick() {
-    var data = 0;
-    data + 1;
-    console.log("data: " + data);
-  }
+  const [count, setCount] = useState(0);
+
   return (
     <div>
-      <>
-        <Main></Main>
-        <h1>Count Me{handleClick}</h1>
-        <button onClick={handleClick}>Click Me!</button>
-      </>
+      <h1>React Counter App</h1>
+      <h2>Count: {count}</h2>
+      <Counter onCountChange={setCount} />
+      <button onClick={() => setCount(count + 1)}>Increment</button>
     </div>
   );
 }
