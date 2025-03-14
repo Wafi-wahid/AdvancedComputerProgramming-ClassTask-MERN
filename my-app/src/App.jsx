@@ -1,17 +1,11 @@
-import React, { useState } from "react";
-import Counter from "../Components/Counter";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+<<<<<<< Tabnine <<<<<<<
+import React from "react";
+>>>>>>> Tabnine >>>>>>>// {"conversationId":"fb145b36-23de-431d-9a53-7ed5d57564a2","source":"instruct"}
+import Button from "../Components/Button";
+export default function App() {
   return (
-    <div>
-      <h1>React Counter App</h1>
-      <h2>Count: {count}</h2>
-      <Counter onCountChange={setCount} />
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
+    <>
+      <Button></Button>
+    </>
   );
 }
-
-export default App;
