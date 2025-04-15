@@ -1,0 +1,42 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Counter from './Counter'
+import Message from './Message'
+import ItemList from './ItemList'
+import Greeting from './Greeting'
+
+
+
+function App() {
+
+  const [completedModules, setCompletedModules] = useState(0);
+    const [message, setMessage] = useState("Initial Message");
+
+    const handleModuleComplete = (msg) => {
+      setMessage(msg);
+        setCompletedModules((prevModules) => prevModules + 1);
+    };
+
+    const updateMessage = () => {
+        setMessage("Updated Message");
+    };
+
+
+  return (
+    <>
+      <div>
+      <h1>React Exam App</h1>
+           <Counter onComplete={handleModuleComplete} />
+         
+           <Message text={message} updateText={updateMessage} />
+
+        </div>
+
+    
+    </>
+  )
+}
+
+export default App

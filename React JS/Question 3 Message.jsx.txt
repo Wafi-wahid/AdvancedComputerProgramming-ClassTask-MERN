@@ -1,0 +1,15 @@
+import React, { Component } from "react";
+
+class Message extends Component {
+    render() {
+        return (
+            <div>
+                <h2>Message Component</h2>
+                <p>{this.props.text}</p>
+                <button onClick={this.props.updateText}>Change Text</button>
+            </div>
+        );
+    }
+}
+
+export default Message;
